@@ -10,7 +10,7 @@ namespace HashData
     {
         static void Main(string[] args)
         {
-            const string firstMessage = "First Message To Hash";
+            const string firstMessage = "123456";
             const string secondMessage = "Second Message To Hash";
 
             Console.WriteLine("Secure HashData");
@@ -36,6 +36,9 @@ namespace HashData
             Console.WriteLine("MD5 Hashes");
             Console.WriteLine();
             Console.WriteLine($"Message 1 hash = {Convert.ToBase64String(md5HashedMessage)}");
+            Console.WriteLine($"Message 1 hash = {Convert.ToString(md5HashedMessage)}");
+            Console.WriteLine($"Message 1 hash = {Encoding.UTF8.GetString(md5HashedMessage)}");
+            Console.WriteLine($"Message 1 hash = {Encoding.Unicode.GetString(md5HashedMessage)}");
             Console.WriteLine($"Message 2 hash = {Convert.ToBase64String(md5HashedMessage2)}");
             Console.WriteLine();
             Console.WriteLine("Sha1 Hashes");
